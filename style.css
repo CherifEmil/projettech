@@ -24,6 +24,7 @@ height: 100%;
 width: 240px;
 background: #11101d;
 padding:6px 14px;
+border-radius: 20px;
 }
 .sidebar .logo_content .logo{
  color:rgb(236, 228, 228);
@@ -53,15 +54,15 @@ padding:6px 14px;
     transform:translate(-50%)
 }
 .sidebar ul{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .sidebar ul li{
 position:relative;
-height: 50px;
+height: 49px;
 width: 100%;
 margin: 0 5px;
 list-style: none ;
-line-height: 50px;
+line-height: 0px;
 
 }
 .sidebar ul li a{
@@ -89,15 +90,24 @@ line-height: 50px;
     bottom: 140px;
     left:0;
     width: 100%;
+
+    
 }
 .sidebar .profile_content .profil{
     position: relative;
     padding: 10px 6px;
-    height: 60px;
+    height: 90px;
+    
 }
 .sidebar .profile_content .profil .profile_detail{
 display:flex;
 align-items: center;
+background: #1d1b31;
+border-radius: 20px;
+}
+.sidebar .profile_content .profil .dit_auteur{
+    margin-left: 80px;  
+    font-size: 30px;
 }
 .profil .profile_detail img{
     height: 40px;
