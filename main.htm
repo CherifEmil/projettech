@@ -23,17 +23,17 @@
     <li>
         <a href="#">
             <i class='bx bx-message-dots'></i>
-            <span class="links_name">Liste de messages</span>
+            <span class="links_name"> La liste de messages</span>
         </a>
-        <!--<span class="tooltips">Dashbord</span>-->
+        <span class="tooltips"> La liste de messagese</span>
         
     </li>
     <li>
         <a href="#">
             <i class='bx bx-edit-alt' ></i>
-            <span class="links_name">Un nouveau message</span>
+            <span class="links_name">Écrire un message</span>
         </a>
-        <!--<span class="tooltips">Dashbord</span>-->
+        <span class="tooltips">Écrire un message</span>
         
     </li>
     <li>
@@ -41,7 +41,7 @@
             <i class='bx bxs-contact' ></i>
             <span class="links_name">Le carnet d'adresses</span>
         </a>
-        <!--<span class="tooltips">Dashbord</span>-->
+        <span class="tooltips">Le carnet d'adresses</span>
         
     </li>
   </ul>
@@ -70,5 +70,12 @@
     </div>
 </div> 
 </div>
+<script>
+let btn = document.querySelector("#btn");
+let sidebar = document.querySelector(".sidebar");
+btn.onclick = function(){
+    sidebar.classList.toggle("active");
+}
+</script>
 </body>
 </html>
