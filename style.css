@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 *{
     margin:0;
     padding:0;
@@ -13,8 +23,10 @@ body{
     position:relative;
     min-height: 100vh; 
     width: 100%;
-    background: rgb(189, 189, 189);
+    background: linear-gradient(-45deg, #ffffff, #cdeff5, #61b3d1, #69bfe0);
+   background-size: 400% 400%;
     overflow:hidden;
+    animation: gradient 5s ease infinite;
 
 }
 .sidebar{
@@ -46,6 +58,7 @@ width: 240px;
 }
 .logo_content .logo i{
     font-size: 50px;
+    color: aqua;
     margin-right: 5px;
 }
 .logo_content .logo .logo_name{
@@ -77,6 +90,7 @@ width: 100%;
 margin: 0px 10px;
 list-style: none ;
 line-height: 0px;
+align-items:center;
 
 }
 
@@ -88,7 +102,7 @@ line-height: 0px;
     border-radius: 6px;
     height:35px;
     width: 222px;
-    background: rgb(57, 210, 248);
+    background: rgb(214, 144, 144);
     line-height: 35px ;
     text-align: center;
     box-shadow: 0 6px  10px rgba(5, 61, 75, 0.7);
@@ -107,22 +121,57 @@ line-height: 0px;
 display:none;
 }
 
+.sidebar ul li .tooltips2{
+    color: rgb(245, 238, 238);position: absolute;
+    left:122px;
+    top:0;
+    transform: translateY(-50%,-50%);
+    
+    border-radius: 6px;
+    height:35px;
+    width: 222px;
+    background: rgb(4, 78, 238);
+    line-height: 35px ;
+    text-align: center;
+    box-shadow: 0 6px  10px rgba(5, 61, 75, 0.7);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display:block;
+}
+.sidebar ul li:hover .tooltips2{
+    transition: all 0.5s ease;
+    top:10%;
+    opacity:1 ;
+    pointer-events: none;
+}
+.sidebar.active ul li:hover .tooltips2{
+display:none;
+}
+
 .sidebar ul li a{
     color:#fff;
     display:flex ;
-    align-items: center;
+    align-items:center;
     text-decoration: none;
     transition:all 0.7s ease;
     border-radius: 12px;
     white-space: nowrap;
+    transform: translateX(-10%);
 }
 
+
 .sidebar ul li a:hover{
+    color:rgb(23, 148, 231);
+    border-radius: 20px;
+    transform: translateX(+5%);
+}
+.sidebar.active ul li a:hover{
     color:rgb(17, 16, 29);
-    background: rgb(57, 210, 248);
+    background: rgb(203, 213, 216);
     border: 4px ridge rgba(17, 16, 29, 1);
     border-radius: 20px;
-    transform: translateX(+20%);
+    transform: translateX(+5%);
 }
 .sidebar ul li a i{
     height:50px;
@@ -130,7 +179,7 @@ display:none;
     border-radius: 1000px;
     line-height: 50px ;
     text-align: top;
-    transform: translateX(+0%);
+    transform: translateX(+15%);
     font-size:20px;
 }
 .sidebar .links_name{
@@ -172,17 +221,15 @@ border-radius: 20px;
     object-fit: cover;
     border-radius: 12px;  
     margin-right: 14px;  
+    margin-left: 15px;
 }
-.profil.profile_detail .name_job3{
-    font-size: 10px;
+.sidebar .profile_content .profil i{
+    opacity: 0;
+    pointer-events: none;
 }
-.profil.profil_detail .name3{
-font-size: 15px;
-width: 400;
-}
-.profil .profil_detail .job3{
-    font-size: 12px;
-    transform:translate()
+.sidebar.active .profile_content .profil i{
+    opacity: 1;
+    pointer-events: none;
 }
 .Pdep{
     position: absolute;
