@@ -14,8 +14,10 @@
  <div class="sidebar">
      <div class="logo_content">
              <div class="logo">
+                <a href="#">
                  <i class='bx bxl-gmail bx-tada' ></i>
-                 <div class="logo_name">Course Email </div>
+                 <span class="logo_name">Course Email </span>
+                </a>
             </div>
             <i class='bx bx-menu bx-rotate-180' id="btn" ></i>
     </div>
@@ -83,8 +85,20 @@
 </div> 
 </div>
 <div class="Pdep">
-    <div class="text">Presentation du projet</div>
+    <div class="titre1"><h1 class="T_ecrire">Ecrire un message</h1></div>
+    <div class="contenu1">    
+    </div>
+    <div class="contenu2">
+        <h2 class="title_M">Destinataire </h2>
+      
+        <textarea type="text" name="email" id="address_mail" class="address_mail"></textarea>
+
+        <textarea type="text" name="content_mail" id="content_mail" class="content_mail">
+        </textarea>
+        <button type="submit" class="send_mail" onclick="alert('Hello world!')">Envoyer le message</button>
+    </div>
 </div>
+    
 <script>
 let btn = document.querySelector("#btn");
 let sidebar = document.querySelector(".sidebar");
